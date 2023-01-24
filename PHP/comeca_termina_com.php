@@ -2,10 +2,10 @@
   Funções para verificar se uma string COMEÇA COM ou TERMINA COM determinado texto.
 */
  
-function comecaCom($string, $search_string) {
-	return $search_string === "" || strrpos($string, $search_string, -strlen($string)) !== false; 
+function comecaCom($texto_completo, $texto_procurado) {
+	return $texto_procurado === "" || strrpos($texto_completo, $texto_procurado, -strlen($texto_completo)) !== false; 
 } 
 
-function terminaCom($string, $search_string) {
-	return $search_string === "" || (($temp = strlen($string) - strlen($search_string)) >= 0 && strpos($string, $search_string, $temp) !== false);
+function terminaCom($texto_completo, $texto_procurado) {
+	return $texto_procurado === "" || (($aux = strlen($texto_completo) - strlen($texto_procurado)) >= 0 && strpos($texto_completo, $texto_procurado, $aux) !== false);
 }
