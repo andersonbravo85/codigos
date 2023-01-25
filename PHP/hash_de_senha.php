@@ -8,6 +8,8 @@
   
   password_verify -> verifica se um password corresponde com um hash
   (https://www.php.net/manual/pt_BR//function.password-verify.php)
+  
+  [ TESTADO NO PHP 8.1.12 ]
 */
 
 // criação
