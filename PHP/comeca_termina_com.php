@@ -1,6 +1,8 @@
 <?php
 /*
   Funções para verificar se uma string COMEÇA COM ou TERMINA COM determinado texto.
+  
+  [ TESTADO NO PHP 8.1.12 ]
 */
  
 function comecaCom($texto_completo, $texto_procurado) {
