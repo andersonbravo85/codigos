@@ -12,6 +12,8 @@ Devido às características do sistema binário, existe correspondência direta 
 
 - divisão inteira (por 2) do operando - caso o deslocamento seja feito para a direita.
 
+[ TESTADO NO PHP 8.1.12 ]
+
 */
 
 // Definindo as variáveis com a operação de bitwise:
