@@ -56,8 +56,7 @@ try {
 $registro = $caminho.'Inativo';
 
 try {
-	$Wshshell->RegDelete($registro);
-	
+	$Wshshell->RegDelete($registro);	
 } catch (Exception $e){
 	echo $e;
 }
