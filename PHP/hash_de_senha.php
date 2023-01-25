@@ -1,3 +1,4 @@
+<?php
 /*
   Script de exemplo de como criar e verificar um hash de senha.
   -------------------------------------------------------------
