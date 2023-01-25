@@ -1,7 +1,7 @@
 /*
-  A classe COM faz parte da extensão 'com_dotnet' que faz parte do núcleo do PHP.
+  Script para abrir determinado programa do Windows utilizando a classe COM.
 
-  Essa classe permite instanciar um objeto COM compatível com OLE e chamar seus métodos e acessar suas propriedades.
+  A classe COM faz parte da extensão 'com_dotnet'. Essa classe permite instanciar um objeto COM compatível com OLE e chamar seus métodos e acessar suas propriedades.
 
   Você pode usar esta técnica para chamar o Internet Explorer, Word, Excel e outras ferramentas.
 
@@ -10,4 +10,3 @@
  
 $shell = new COM("WScript.Shell");
 $shell->Run("notepad.exe");
-$shell = null;
