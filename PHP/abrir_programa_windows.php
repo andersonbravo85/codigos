@@ -1,3 +1,4 @@
+<?php
 /*
   Script para abrir determinado programa do Windows utilizando a classe COM.
   --------------------------------------------------------------------------
