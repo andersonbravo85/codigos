@@ -1,5 +1,6 @@
 /*
   Script para abrir determinado programa do Windows utilizando a classe COM.
+  --------------------------------------------------------------------------
 
   A classe COM faz parte da extensão 'com_dotnet'. Essa classe permite instanciar um objeto COM compatível com OLE e chamar seus métodos e acessar suas propriedades.
 
