@@ -5,11 +5,10 @@
   preg_grep - retorna as entradas do array que combinaram com o padrão
 
   Formato: array preg_grep ( string $pattern , array $input [, int $flags ] );
-
-  Obs.: Se usado  a flag PREG_GREP_INVERT, esta função retorna os elementos do array de entrada que não casam com o dado pattern
   
   https://www.php.net/manual/pt_BR/function.preg-grep.php
   
+  [ TESTADO NO PHP 8.1.12 ]
 */
 
 //
@@ -54,3 +53,23 @@ foreach ($result as $i => $val)
 
 // 0 -> 'abc'
 // 1 -> 'aeiou'
+
+
+//
+// Exemplo 3: Procurar os conteúdos que NÃO contenham a string desejada
+//
+
+$array = array();
+$array[0] = 'and bravo';
+$array[1] = 'gab bravo';
+$array[2] = 'joao trinta';
+$array[3] = 'tati bravo';
+
+$search = "bravo";
+
+$result = preg_grep('/'.$search.'/i', $array, PREG_GREP_INVERT);
+
+foreach ($result as $i => $val)
+	echo $i . " - " . $val;
+
+// 2 -> 'joao trinta'
