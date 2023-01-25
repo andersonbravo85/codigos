@@ -8,6 +8,8 @@
   Você pode usar esta técnica para chamar o Internet Explorer, Word, Excel e outras ferramentas.
 
   WScript, Windows Scripting Host ou simplesmente WSH é a linguagem de script do sistema operacional Windows.
+  
+  [ TESTADO NO PHP 7.4.7 ]
 */
  
 $shell = new COM("WScript.Shell");
