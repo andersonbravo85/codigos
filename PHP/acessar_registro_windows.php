@@ -30,7 +30,7 @@ REG_NONE – nenhum data type associado
 //
 // 1) Utilizando a extensão 'com_dotnet'
 //
-//	[ TESTADO NO PHP 7.4.7 ]
+//	[ TESTADO NO PHP 8.1.12 ]
 //
 //////////////////////////////////////////
 
