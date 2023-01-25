@@ -1,3 +1,4 @@
+<?php
 /*
   Funções para verificar se uma string COMEÇA COM ou TERMINA COM determinado texto.
 */
