@@ -24,14 +24,13 @@ REG_EXPAND_SZ – string de tamanho variável
 REG_MULTI_SZ – lista de itens separados por espaço ou vírgula
 REG_BINARY – binário
 REG_NONE – nenhum data type associado
-
-[ TESTADO NO PHP 7.4.7 ]
-
 */
 
 //////////////////////////////////////////
 //
 // 1) Utilizando a extensão 'com_dotnet'
+//
+//	[ TESTADO NO PHP 7.4.7 ]
 //
 //////////////////////////////////////////
 
@@ -68,8 +67,9 @@ try {
 //
 // 2) Utilizando 'win32std' - Set of standard Windows API functions
 //
-//	https://pecl.php.net/package/win32std
+//	http://wildphp.free.fr/wiki/doku.php?id=win32std:index
 //
+//	[ NÃO TESTADO. É EMBUTIDO EM PROGRAMAS COMPILADOS ]
 ///////////////////////////////////////////////////////////////////
 
 $chavePrincipal = HKEY_CURRENT_USER;
