@@ -1,5 +1,5 @@
-<?php
-/*
+
+
   Script de exemplo de como criar e verificar um hash de senha.
   -------------------------------------------------------------
 
@@ -10,8 +10,10 @@
   (https://www.php.net/manual/pt_BR//function.password-verify.php)
   
   [ TESTADO NO PHP 8.1.12 ]
-*/
 
+
+```php
+<?php
 // criação
 $senha = "mamae0";
 $hash = password_hash($senha, PASSWORD_DEFAULT);
@@ -21,3 +23,4 @@ if (password_verify($senha, $hash))
   echo 'Senha correta';
 else
   echo 'Senha incorreta';
+```
