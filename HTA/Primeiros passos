@@ -1,0 +1,55 @@
+HTA (HTML Application) é um programa do Windows cujo código fonte consiste em HTML, HTML dinâmico,
+e uma ou mais linguagens de script suportadas pelo Internet Explorer, como o VBScript ou JavaScript.
+
+O HTML é usado para gerar a interface do usuário, e a linguagem de script é usado para a lógica do programa.
+Um HTA executa sem as limitações do modelo de segurança do navegador de internet, na verdade, ele executa como uma aplicação "totalmente confiável".
+
+É necessário utilizar uma tag específica para o hta: ‹HTA:APPLICATION› . A extensão do arquivo de um HTA é .hta
+
+Exemplo de declaração de um hta:
+
+
+‹head›
+	‹HTA:APPLICATION	
+		APPLICATIONNAME="myApp"
+		BORDER="thin"
+		BORDERSTYLE="normal"
+		CAPTION="yes"
+		ICON=""
+		MAXIMIZEBUTTON="yes"
+		MINIMIZEBUTTON="yes"
+		SHOWINTASKBAR="no"
+		SINGLEINSTANCE="no"
+		SYSMENU="yes"
+		VERSION="1.0"
+		WINDOWSTATE="maximize"
+	/›
+‹/head›
+
+
+LISTA DE PROPRIEDADES:
+
+• APPLICATIONNAME: nome da aplicação
+• VERSION: versão
+• SINGLEINSTANCE: especifica se somente uma instância do hta pode rodar (yes, no)
+• BORDER: seta o formato da borda (thin, dialog, none, thick)
+• BORDERSTYLE: definições da borda (complex, normal, raised, static, sunken)
+• CAPTION: barra de título ou não (yes, no)
+• ICON: define o 'favicon'. A imagem tem que ter o tamanho 32x32
+• MAXIMIZEBUTTON: exibir botão de maximizar (yes, no)
+• MINIMIZEBUTTON: exibir botão de minimizar (yes, no)
+• SHOWINTASKBAR: exibir barra de tarefas (yes, no)
+• WINDOWSTATE: como a janela será exibida (normal, minimize, maximize)
+• INNERBORDER: exibir borda (yes, no)
+• NAVIGABLE: links serão exibidos dentro do hta ou não (yes, no)
+• SCROLL: barra de rolagem (yes, no, auto)
+• SCROLLFLAT: barra de rolagem 3D (yes, no)
+• SYSMENU: habilita o botão de maximizar, minimizar, fechar, e clique com botão direito para fechar (yes, no)
+
+
+Podemos fazer com que um hta seja iniciado automaticamente ao iniciar um cd-rom ou pendrive.
+
+Para isso, criamos um arquivo autorun.inf com o seguinte trecho de código:
+
+[autorun]
+shellexecute=arquivo.hta 
