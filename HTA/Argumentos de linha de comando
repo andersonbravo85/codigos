@@ -1,0 +1,27 @@
+Podemos passar parâmetros para o arquivo HTA da seguinte maneira:
+
+wscript teste.hta "Anderson Bravo" "34"
+
+E então conseguimos lê-los da maneira que segue abaixo:
+
+// teste.hta
+‹head›
+	‹HTA:APPLICATION	
+		APPLICATIONNAME="meuHta"		
+	/›
+‹/head›
+
+var args = meuHta.commandLine.match(/[^"]+(?=(" ")|"$)/g);
+
+if (args) {
+	
+	// args[0] é sempre o nome do arquivo
+	
+	for (var i = 0; i < args.length; i++)
+		alert(args[i]);
+	
+	// args[0] - teste.hta
+	// args[1] - Anderson Bravo
+	// args[2] - 34
+	
+}
