@@ -1,0 +1,10 @@
+A função GROUP_CONCAT() é uma função de agregação que concatena o resultado de uma pesquisa em uma string, utilizando um separador pré definido.
+
+No nosso exemplo vamos concatenar os IDs dos usuários, usando o separador ',' (vírgula).
+
+
+Exemplo:
+
+SELECT GROUP_CONCAT(id, ', ') AS ids FROM usuarios;
+
+// resultado: '1, 2, 3, 4, ...'
