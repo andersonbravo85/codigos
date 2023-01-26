@@ -1,0 +1,16 @@
+Quando temos um campo na tabela que é AUTOINCREMENT, não conseguimos inserir um valor manualmente neste campo.
+
+Porém, isto pode ser contornado utilizando o comando SET IDENTITY_INSERT antes do INSERT.
+
+
+Exemplo:
+
+SET IDENTITY_INSERT nome_tablea ON;
+
+... comando aqui ...
+
+SET IDENTITY_INSERT nome_tablea OFF;
+
+
+Fonte:
+https://msdn.microsoft.com/pt-br/library/ms188059.aspx
