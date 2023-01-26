@@ -1,0 +1,13 @@
+O HTA permite alterar o tamanho da janela em tempo real durante a execução do seu script.
+
+Segue o trecho de código de como fazer:
+
+
+var width = 400;
+var height = 200;
+
+var posX = (screen.availWidth - width) / 2;
+var posY = (screen.availHeight - height) / 2;
+
+window.resizeTo(width, height);
+window.moveTo(posX, posY);
