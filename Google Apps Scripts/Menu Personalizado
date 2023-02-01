@@ -1,0 +1,42 @@
+/*
+  Exemplo de criação de menu personalizado.
+  
+  SpreadsheetApp - cria menu nas planilhas google
+  DocumentApp - cria menu nos documentos google
+  
+  Obs.: Ao fechar o arquivo, o menu some.
+        Para permitir que os usuários visualizem e executem o menu novo e suas funções, 
+          você deve torná-lo visível assim que o documento for aberto através da função onOpen. 
+      (Pode ter um delay de alguns poucos segundos para o menu aparecer ao abrir o arquivo)
+*/
+
+function onOpen() {
+  createMenu();
+}
+
+// Planilhas
+function createMenu() {
+  SpreadsheetApp.getUi()
+  .createMenu("Meu Menu")
+  .addItem("Opção 1" ,"funcaoSheet")
+  .addToUi();
+}
+
+function funcaoSheet() {
+  var ui = SpreadsheetApp.getUi();
+  ui.alert("Título", "Mensagem", ui.ButtonSet.OK);  
+}
+
+// Documentos
+function createMenu2() {
+  DocumentApp.getUi()
+  .createMenu("Meu Menu")
+  .addItem("Opção 1" ,"funcaoDoc")
+  .addToUi();
+}
+
+function funcaoDoc() {
+  var ui = DocumentApp.getUi();
+  ui.alert("Título", "Mensagem", ui.ButtonSet.OK);  
+}
+
