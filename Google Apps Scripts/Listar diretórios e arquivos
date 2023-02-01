@@ -1,0 +1,21 @@
+/*
+  Exemplo de como listar diretórios e arquivos.
+*/
+
+var pastaPrincipal = DriveApp.getFolderById("ID_PASTA"); // diretório que quero listar
+
+var pastas = pastaPrincipal.getFolders();
+
+while (pastas.hasNext()) {
+
+    var pasta = pastas.next();
+    
+    var arquivos = pasta.getFiles();    
+
+    while (arquivos.hasNext()) {
+
+      var arquivo = arquivos.next();        
+
+      console.log("ID: "+arquivo.getId()+", NOME: "+arquivo.getName());
+    }  
+}
