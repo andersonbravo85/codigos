@@ -1,0 +1,19 @@
+/*
+  Exemplo de como ocultar e/ou exibir páginas de uma planilha.
+*/
+
+var arquivo = SpreadsheetApp.openById("ID_DO_ARQUIVO");
+  
+var planilhas = arquivo.getSheets();
+  
+// ocultar páginas
+for (var i = 0; i < planilhas.length; i++) {
+  if (planilhas[i].getSheetName() == "NOME_PARA_OCULTAR")    
+    planilhas[i].hideSheet();
+}
+
+// exibir
+for (var j = 0; j < planilhas.length; j++) {
+  if (planilhas[j].getSheetName() == "NOME_PARA_EXIBIR")
+    planilhas[j].showSheet();
+}
