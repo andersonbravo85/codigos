@@ -1,0 +1,27 @@
+/*
+  Exemplo de envio de e-mail
+*/
+
+//
+// envio de e-mail onde o FROM é a conta do GMAIL onde roda o script
+//
+function enviaEmail(para, assunto, mensagem) {
+  MailApp.sendEmail(para, assunto, mensagem);  
+}
+
+enviaEmail("anderson@gmail.comr", "Assunto", "Mensagem");
+
+//
+// envio de e-mail alterando o FROM (necessário adicionar o e-mail como alias do e-mail principal)
+// (https://support.google.com/mail/answer/22370?hl=en)
+//
+// também é necessário utilizar a api do Gmail (clicando no '+' no menu serviços a esquerda do editor)
+//
+function enviaEmail2(para, assunto, mensagem) {
+  GmailApp.sendEmail(para, assunto, '', {    
+    htmlBody: mensagem,
+    from: "alias@dominio.com.br" // especificamos o novo from
+  }); 
+}
+
+enviaEmail2("anderson@gmail.com", "Assunto", "Mensagem");
