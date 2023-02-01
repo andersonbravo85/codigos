@@ -1,0 +1,21 @@
+/*
+  Função para autorizar automaticamente o acesso a uma planilha importada por ' =IMPORTRANGE() ',
+    sem a necessidade de clicar em 'Permitir', que aparece sempre que importamos.
+*/
+
+function autorizarAcessoPlanilha(idPlanilhaQueQueroAcessar, idPlanilhaQueVaiAcessar) {
+   
+  const url = `https://docs.google.com/spreadsheets/d/${idPlanilhaQueVaiAcessar}/externaldata/addimportrangepermissions?donorDocId=${idPlanilhaQueQueroAcessar}`;
+
+  const token = ScriptApp.getOAuthToken();
+
+  const parametros = {
+    method: 'post',
+    headers: {
+      Authorization: 'Bearer ' + token,
+    },
+    muteHttpExceptions: true
+  };
+  
+  UrlFetchApp.fetch(url, parametros);
+}
