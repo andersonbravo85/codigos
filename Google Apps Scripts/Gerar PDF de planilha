@@ -1,0 +1,9 @@
+/*
+  Exemplo de como gerar um PDF de uma planilha.
+*/
+
+var arquivoPlanilha = SpreadsheetApp.openById("ID_DA_PLANILHA");
+
+let blob = arquivoPlanilha.getAs('application/pdf');
+
+let pdf = DriveApp.getFolderById("ID_PASTA_ONDE_SERA_CRIADO").createFile(blob).setName("arquivo.pdf");
