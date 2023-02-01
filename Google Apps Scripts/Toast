@@ -1,0 +1,11 @@
+/*
+  Exemplo de Toast.
+
+  O toast aparece como um pop-up no canto inferior direito da planilha ativa, com um título e uma mensagem.
+  
+  OBS.: não é possível utilizar em um script independente. Foi testado em um script interno de uma Planilha Google e ativado ao clicar em um botão.
+*/
+
+function toast() {
+  SpreadsheetApp.getActiveSpreadsheet().toast("Título", "Mensagem");
+}
