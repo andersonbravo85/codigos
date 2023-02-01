@@ -1,0 +1,23 @@
+/*
+  Exemplo de criação de Sidebar.
+  
+  A sidebar é uma caixa de diálogo estática localizada no lado direito da janela do editor.
+  
+  SpreadsheetApp - cria a sidebar nas planilhas google
+  DocumentApp - cria a sidebar nos documentos google
+  
+  Obs.: Ao fechar o arquivo, a Sidebar some.
+        Para permitir que os usuários visualizem e executem o menu novo e suas funções, 
+          você deve torná-lo visível assim que o documento for aberto através da função onOpen. 
+      (Pode ter um delay de alguns poucos segundos para o menu aparecer ao abrir o arquivo)
+*/
+
+function onOpen() {
+
+  var htmlOutput = HtmlService
+  .createHtmlOutput('Aqui eu posso colocar qualquer coisa de html.<br /><br />E javascript: <button onclick="alert(\'Olá\');">Clique em mim</button>')
+  .setTitle('Minha Sidebar');
+  
+  SpreadsheetApp.getUi().showSidebar(htmlOutput);
+  // DocumentApp.getUi().showSidebar(htmlOutput);
+}
