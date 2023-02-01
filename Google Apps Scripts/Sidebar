@@ -18,6 +18,11 @@ function onOpen() {
   .createHtmlOutput('Aqui eu posso colocar qualquer coisa de html.<br /><br />E javascript: <button onclick="alert(\'Olá\');">Clique em mim</button>')
   .setTitle('Minha Sidebar');
   
+  // o html output pode ser criado em um arquivo separado
+  // e incluimos com 'createHtmlOutputFromFile('Index')' ao invés de 'createHtmlOutput'
+  //
+  // para criar o html clique no '+' do lado esquerdo do editor de arquivos e escolha HMTL
+  
   SpreadsheetApp.getUi().showSidebar(htmlOutput);
   // DocumentApp.getUi().showSidebar(htmlOutput);
 }
