@@ -1,1 +1,1 @@
-Códigos Google Apps Scripts
+Códigos Google Apps Scripts (GAS)
