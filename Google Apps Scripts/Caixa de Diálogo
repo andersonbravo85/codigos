@@ -1,0 +1,22 @@
+/*
+  Exemplo de caixa de diálogo no navegador.
+
+  Browser.msgBox(titulo, texto, botões)
+
+  BOTÕES:
+  
+  OK - Um único botão "OK", indicando uma mensagem informativa que só pode ser dispensada.
+  OK_CANCEL	- Um botão "OK" e um botão "Cancelar", permitindo que o usuário prossiga ou interrompa uma operação.
+  YES_NO - Um botão "Sim" e um botão "Não", permitindo que o usuário responda a uma pergunta de sim/não.
+  YES_NO_CANCEL - Um botão "Sim", um botão "Não", um botão "Não" e um botão "Cancelar", permitindo que o usuário responda a uma pergunta sim/não ou interrompa uma operação.
+
+  OBS.: não é possível utilizar em um script independente. Foi testado em um script interno de uma Planilha Google e ativado ao clicar em um botão.
+*/
+
+function popup() {
+
+  var resposta = Browser.msgBox("Teste de Popup", "Mensagem de teste", Browser.Buttons.OK_CANCEL);
+  
+  // Valores possíveis para as respostas:
+  // "ok", "yes", "no", "cancel"  ( todas string )
+}
