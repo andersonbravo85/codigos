@@ -1,0 +1,24 @@
+/*
+  Exemplos de manipulação dos editores de arquivos e pastas.
+*/
+
+// Ler editores
+ var editores = arquivo.getEditors();
+ for (var i = 0; i < editores.length; i++)
+  console.log(editores[i]);
+
+// Adicionar editores
+pasta.addEditor("email@gmail.com");
+
+// Removendo permissão do editor de compartilhar um arquivo
+arquivo.setShareableByEditors(false);
+
+// Adicionar e-mail como leitor da pasta
+// OBS.: necessário adicionar a api 'Drive' clicando no '+' dos serviços do lado esquerdo do editor
+var resource = {
+  role: 'reader',
+  type: 'user',
+  value: "email@gmail.com"
+};
+  
+Drive.Permissions.insert(resource, idPasta);
