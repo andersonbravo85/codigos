@@ -1,0 +1,34 @@
+/*
+  Exemplos de array de objeto.
+*/
+
+var meses = [
+      {mes: "janeiro",    mesNum: "01"},
+      {mes: "fevereiro",  mesNum: "02"},
+      {mes: "março",      mesNum: "03"},
+      {mes: "abril",      mesNum: "04"},
+      {mes: "maio",       mesNum: "05"},
+      {mes: "junho",      mesNum: "06"},
+      {mes: "julho",      mesNum: "07"},
+      {mes: "agosto",     mesNum: "08"},
+      {mes: "setembro",   mesNum: "09"},
+      {mes: "outubro",    mesNum: "10"},
+      {mes: "novembro",   mesNum: "11"},
+      {mes: "dezembro",   mesNum: "12"}
+];
+
+// pesquisa por mes
+var auxMes = meses.find((item) => item.mes == "janeiro");
+
+console.log(auxMes.mes + " - " + auxMes.mesNum); // janeiro - 01
+
+// inclusão
+meses.push({mes: "decimoterceiromes", mesNum: "13"});
+
+// percorrendo o array
+meses.forEach(function(item) {
+  console.log(item.mes + " - " + item.mesNum);
+});
+
+// removendo último elemento
+meses.pop();
