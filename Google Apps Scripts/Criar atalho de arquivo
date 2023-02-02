@@ -1,0 +1,22 @@
+/*
+  Exemplo de criação de atalho de determinado arquivo nas pastas selecionadas.
+*/
+
+function criarAtalho(id_arquivo_a_ser_copiado, nomeArquivo, id_pasta_destino) {
+
+  const resource = {
+    shortcutDetails: { targetId: id_arquivo_a_ser_copiado },
+    title: nomeArquivo,
+    mimeType: "application/vnd.google-apps.shortcut",
+  };
+
+  resource.parents = [{ id: id_pasta_destino }];
+
+  const atalho = Drive.Files.insert(resource);
+  
+  // atalho.editable = false;
+  
+  // 
+  // NOTA: ERRO 'Drive is not defined.' Para corrigir o erro, clique no + em serviços do lado esquerdo e adicione o serviço do Drive.
+  //  
+}
