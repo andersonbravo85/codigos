@@ -1,0 +1,9 @@
+/*
+  Exemplo de criação de pasta.
+*/
+
+var pasta = DriveApp.getFolderById("ID_PASTA"); 
+
+var novaPasta = pasta.createFolder("NOME DA NOVA PASTA");
+
+console.log(novaPasta.getId());
