@@ -1,0 +1,21 @@
+/*
+  Exemplo de como ordenar uma planilha por determinada coluna.
+*/
+
+/*
+  Supondo que temos uma tabela no formato:
+  
+         A      |  B
+  ---------------------
+  1 |  NOME     | IDADE
+  ----------------------
+  2 | Anderson  | 37
+  ---------------------
+  3 | Maria     | 10
+*/
+
+var planilhaPrincipal = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Inicial");
+
+// vamos ordenar a tabela pela coluna B (2) do menos para o maior (ASCENDING)
+// os valores da nossa tabela começam na posição A1 e vão até B50
+planilhaPrincipal.getRange("A2:B50").sort({column: 2, ascending: true});
