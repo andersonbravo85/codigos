@@ -1,0 +1,16 @@
+/*
+  Exemplo de criação de link em célula de planilha.
+*/
+
+var arquivoOndeSeraCriadoLink = SpreadsheetApp.openById("ID_DA_PLANILHA");
+
+var arquivoAlvo = SpreadsheetApp.openById("ID_DA_PLANILHA_ALVO");
+
+var planilhaAlvo = arquivoAlvo.getSheetByName("Estoque");
+
+var link = SpreadsheetApp.newRichTextValue()
+            .setText("Abrir link")
+            .setLinkUrl(0, 5, arquivoAlvo.getUrl()+"#gid="+planilhaAlvo.getSheetId())
+            .build();
+
+arquivoOndeSeraCriadoLink.getRange("A1").setRichTextValue(link);
