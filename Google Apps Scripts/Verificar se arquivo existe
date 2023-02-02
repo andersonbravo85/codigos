@@ -1,0 +1,12 @@
+/*
+  Exemplo de função para verificar se um arquivo existe em determinada pasta.
+*/
+
+function arquivoExiste(idPasta, nomeArquivo) {
+
+  var pastaPDFs = DriveApp.getFolderById(idPasta); 
+
+  var listaDeArquivos = pastaPDFs.getFilesByName(nomeArquivo);
+
+  return listaDeArquivos.hasNext();
+}
