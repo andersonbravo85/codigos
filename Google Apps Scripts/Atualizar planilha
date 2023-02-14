@@ -1,0 +1,7 @@
+/*
+  Método para atualizar a planilha enquanto o script está em execução.
+  
+  Sem esse trecho de código, os dados inseridos na planilha via programação só irão aparecer no fim da aexecução.
+*/
+
+SpreadsheetApp.flush();
