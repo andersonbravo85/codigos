@@ -1,5 +1,5 @@
 /*
-  Exemplo de como ler e percorrer os dados de uma planilha.
+  Exemplo de como percorrer os dados de uma planilha.
 
        A   |     B       |    C
 1 | ESCOLA | RESPONSÁVEL |  E-MAIL
