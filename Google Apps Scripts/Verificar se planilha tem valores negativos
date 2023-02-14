@@ -1,0 +1,27 @@
+/*
+  Exemplo de como ler os valores de uma planilha e verificar se tem algum valor negativo.
+
+       A    |     B    
+1 |  ITEM   |    QTD 
+-----------------------
+2 |  prod1  |    5
+-----------------------
+3 |  prod2  |   -1
+-----------------------
+4 |  prod3  |   10
+
+
+*/
+
+var arquivo = SpreadsheetApp.openById("ID_DA_PLANILHA");
+
+let linhaInicial = 2;                 // linha que começa nossa lista (linha começa a contar de 1)
+let quantidadeDeLinhasParaLer = 100;  // a partir da linhaInicial quantas linhas vou ler
+let colunaInicial = 2;                // coluna começa a contar de 1 (A)
+let quantidadeDeColunasParaLer = 1;   // a partir da colunaInicial quantas colunas vou ler
+  
+var tabelaProdutos = arquivo.getRange(linhaInicial, colunaInicial, quantidadeDeLinhasParaLer, quantidadeDeColunasParaLer);
+  
+var produtos = tabelaProdutos.getValues();  
+
+let temNegativo = produtos.some(p => p < 0);
