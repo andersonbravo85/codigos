@@ -1,0 +1,32 @@
+/*
+  Exemplo de como ler e percorrer os dados de uma planilha.
+
+       A   |     B       |    C
+1 | ESCOLA | RESPONSÁVEL |  E-MAIL
+------------------------------------
+2 |  ABC   |   João      | abc@gmail.com
+-----------------------------------------
+3 |  XYZ   |   José      | xyz@gmail.com
+-----------------------------------------
+4 |  XPTO  |   Maria     | xpto@gmail.com
+
+
+*/
+
+var arquivo = SpreadsheetApp.openById("ID_DA_PLANILHA");
+
+let linhaInicial = 2;                 // linha que começa nossa lista (linha começa a contar de 1)
+let quantidadeDeLinhasParaLer = 100;  // a partir da linhaInicial quantas linhas vou ler
+let colunaInicial = 1;                // coluna começa a contar de 1 (A)
+let quantidadeDeColunasParaLer = 3;   // a partir da colunaInicial quantas colunas vou ler
+  
+var tabelaEscolas = arquivo.getRange(linhaInicial, colunaInicial, quantidadeDeLinhasParaLer, quantidadeDeColunasParaLer);
+  
+var escolas = tabelaEscolas.getValues();  
+
+for (var i in escolas) {    
+
+  var escola = escolas[i];   
+
+  console.log("Nome da escola: "+escola[0]". Responsável: "+escola[1]+". E-mail: "+escola[2]);
+}
