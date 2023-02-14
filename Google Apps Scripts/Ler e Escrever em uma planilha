@@ -1,0 +1,11 @@
+/*
+  Exemplo de como ler e escrever em uma planilha.
+*/
+
+var planilhaPrincipal = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Relatório");
+
+// escrever
+planilhaPrincipal.getRange("A1").setValue("Relatório Mensal");
+
+// ler
+let mes = planilhaPrincipal.getRange("A2").getValue();
