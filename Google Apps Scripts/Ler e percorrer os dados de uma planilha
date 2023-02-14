@@ -13,14 +13,19 @@
 
 */
 
-var arquivo = SpreadsheetApp.openById("ID_DA_PLANILHA");
+// planilha externa
+//var arquivo = SpreadsheetApp.openById("ID_DA_PLANILHA");
+//var planilha = arquivo.getSheetByName("Lista");
+
+// planilha onde roda o script
+var planilha = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Lista");
 
 let linhaInicial = 2;                 // linha que começa nossa lista (linha começa a contar de 1)
 let quantidadeDeLinhasParaLer = 100;  // a partir da linhaInicial quantas linhas vou ler
 let colunaInicial = 1;                // coluna começa a contar de 1 (A)
 let quantidadeDeColunasParaLer = 3;   // a partir da colunaInicial quantas colunas vou ler
   
-var tabelaEscolas = arquivo.getRange(linhaInicial, colunaInicial, quantidadeDeLinhasParaLer, quantidadeDeColunasParaLer);
+var tabelaEscolas = planilha.getRange(linhaInicial, colunaInicial, quantidadeDeLinhasParaLer, quantidadeDeColunasParaLer);
   
 var escolas = tabelaEscolas.getValues();  
 
