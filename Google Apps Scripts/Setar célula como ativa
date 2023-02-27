@@ -1,0 +1,7 @@
+/*
+  Exemplo de como setar determinada célula como ativa (colocar a seleção na célula).
+*/
+
+var planilha = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("NOME_PLANILHA");
+
+planilha.getRange("B100").activateAsCurrentCell(); // vai mover o cursor até a linha 100 da coluna B
