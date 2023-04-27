@@ -1,0 +1,17 @@
+/*
+  Exemplo de 'modal' que fica aberto enquanto uma tarefa é executada.
+*/
+
+function onOpen() {
+  openDialogue();
+}
+
+function openDialogue() {
+  var html = "Carregando Planilha ...<script>google.script.run.withSuccessHandler(function() {google.script.host.close()}).doit();</script>";
+  var h = HtmlService.createHtmlOutput(html);
+  SpreadsheetApp.getUi().showModalDialog(h, "Aguarde");
+}
+
+function doit() {
+
+}
