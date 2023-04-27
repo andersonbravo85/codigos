@@ -1,0 +1,36 @@
+/*
+  Exemplo de como ordenar as planilhas dentro do arquivo.
+*/
+
+// lista as planilhas
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+var sheets = ss.getSheets();
+
+for (var i = 1; i <= sheets.length; i++) {
+
+  // ativa uma planilha
+  ss.setActiveSheet(ss.getSheetByName(sheets[i].getName()));
+  
+  // move para a posição desejada
+  // começa a partir do 1
+  ss.moveActiveSheet(i);
+}
+  
+//
+// ordenando em ordem alfabética
+//
+
+var ss = SpreadsheetApp.getActiveSpreadsheet();
+
+var arrayNomes = [];
+var sheets = ss.getSheets();
+
+for (var x = 0; x < sheets.length; x++)
+  arrayNomes.push(sheets[x].getName());
+
+arrayNomes.sort();
+
+for (var j = 0; j < sheets.length; j++) {
+  ss.setActiveSheet(ss.getSheetByName(arrayNomes[j]));
+  ss.moveActiveSheet(j + 1);
+}
